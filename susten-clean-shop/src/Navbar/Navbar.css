@@ -1,0 +1,95 @@
+header {
+  width: 100%;
+  padding: 10px 70px;
+  background: #fff;
+  box-shadow: 0 4px 4px #0009;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.Logo {
+  height: 70px;
+}
+
+.Logo img {
+  height: 100%;
+}
+
+.Nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Menu {
+  display: flex;
+  gap: 30px;
+  color: #000;
+}
+
+.NavItem {
+  position: relative;
+  padding: 10px 0;
+}
+
+.NavItem:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  height: 2px;
+  width: 100%;
+  background: #000;
+}
+
+.Login {
+  display: flex;
+  gap: 10px;
+}
+
+.Login button {
+  background: transparent;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.BtnFill {
+  background: rgb(57, 96, 187) !important;
+  color: #fff;
+}
+
+.BtnGhost {
+  color: rgb(57, 96, 187);
+  border: 2px solid rgb(57, 96, 187) !important;
+}
+
+.SubMenu {
+  background: #fff;
+  border-left: 2px solid #000;
+  position: absolute;
+  bottom: -122px;
+  display: none;
+  flex-direction: column;
+}
+
+.DropMenu:hover .SubMenu {
+  display: flex;
+}
+
+.SubMenu .NavItem {
+  min-width: 350px;
+  background: #fff;
+  padding: 10px 30px;
+}
+
+.SubMenu .NavItem:hover {
+  background: #f4f4f4;
+}
+
+.SubMenu .NavItem:hover::before {
+  height: 0;
+}
