@@ -1,5 +1,6 @@
 import "./Navbar.css";
-import logo from '../img/logo.JPG';
+import logo from '../../img/logo.JPG';
+import { CartWidget } from '../CartWidget/CartWidget';
 
 export function Navbar() {
     return (
@@ -32,6 +33,7 @@ export function Navbar() {
                 </ul>
 
                 <div className="Login">
+                    <CartWidget />
                     <button className="BtnGhost">Login</button>
                     <button className="BtnFill">Registrarse</button>
                 </div>
