@@ -11,7 +11,7 @@ export function ItemCount({title, stock, initial}) {
     }
 
     const restarValor = () => {
-        if (valor >= initial) {
+        if (valor > initial) {
             setValor(valor - 1)
         }
     }
