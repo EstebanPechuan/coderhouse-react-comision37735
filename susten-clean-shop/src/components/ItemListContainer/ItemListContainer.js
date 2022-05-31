@@ -5,7 +5,7 @@ import { ItemCount } from "../ItemCount/ItemCount";
 export function ItemListContainer() {
     return ( 
         <div className="ItemList">
-            <h2>Entrega N° 2 - Contador con botón</h2>
+            <h2>Entrega N° 4 - Contador con botón</h2>
 
             <div className="ItemListCards">
                 <ItemCount title="Producto 1" stock={5} initial={1} />
