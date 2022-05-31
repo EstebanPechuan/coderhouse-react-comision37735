@@ -1,19 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import  "./ItemCount.css";
 
-export function ItemCount({number, setNumber, stock, initial}) {
+export function ItemCount({title, stock, initial}) {
+    const [valor, setValor] = useState(initial)
+
+    const sumarValor = () => {
+        if (valor < stock) {
+            setValor(valor + 1)
+        }
+    }
+
+    const restarValor = () => {
+        if (valor >= initial) {
+            setValor(valor - 1)
+        }
+    }
+    
+    useEffect(() => {
+        console.log(valor)
+    }, [valor])
+    
     return (
-        <div>
-            <p>Camisa Triger</p>
+        <div className="Card">
+            <p>{title}</p>
             
-            <div>
-                <button onClick={() => {
-                    setNumber(number--)
-                }}>-</button>
-                {/* <input type="text" name="numero" value={number}/> */}
-                <span>{number}</span>
-                <button onClick={() => {
-                    setNumber(number++)
-                }}>+</button>
+            <div className="Buttons">
+                <button onClick={restarValor}>-</button>
+                <span>{valor}</span>
+                <button onClick={sumarValor}>+</button>
             </div>
         </div>
     );
