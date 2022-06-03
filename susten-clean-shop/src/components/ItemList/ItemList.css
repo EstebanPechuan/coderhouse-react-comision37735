@@ -1,0 +1,15 @@
+.ListaProductos {
+  width: 100%;
+  padding: 0 70px;
+}
+
+.ListaProductos > h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.Catalogo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}

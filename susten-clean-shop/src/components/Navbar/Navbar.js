@@ -18,7 +18,7 @@ export function Navbar() {
                     </li>
                     <li className="NavItem DropMenu">
                         <a href="#">Productos</a>
-                        <ul className="SubMenu">
+                        {/* <ul className="SubMenu">
                             <li className="NavItem">
                                 <a href="#">Productos para cocinas industriales</a>
                             </li>
@@ -28,7 +28,7 @@ export function Navbar() {
                             <li className="NavItem">
                                 <a href="#">Limpieza de pisos</a>
                             </li>
-                        </ul>
+                        </ul> */}
                     </li>
                 </ul>
 
