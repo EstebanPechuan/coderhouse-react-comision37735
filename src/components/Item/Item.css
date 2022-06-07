@@ -12,3 +12,12 @@
   width: 150px;
   background: #ccc;
 }
+
+.ButtonItem {
+  padding: 10px 20px;
+  background: #2d75b8;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
