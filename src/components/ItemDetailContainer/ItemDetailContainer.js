@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+// import { Spinner } from "react-bootstrap"
 import { pedirDatos } from "../../mock/pedirDatos"
 import { useParams } from "react-router-dom"
 import { ItemDetail } from "../ItemDetail/ItemDetail"
@@ -6,25 +7,35 @@ import { ItemDetail } from "../ItemDetail/ItemDetail"
 
 export const ItemDetailContainer = () => {
 
-    const [item, setItem] = useState()
+    const [item, setItem] = useState(null)
+    const [loading, setLoading] = useState(true)
 
     const { itemId } = useParams()
 
     useEffect(() => {
+        setLoading(true)
+
         pedirDatos()
             .then((resp) => {
                setItem( resp.find((item) => item.id === Number(itemId)) )
-
-               console.log(item);
             })
             .catch((error) => {
                 console.log('ERROR', error)
+            })
+            .finally(() => {
+                setLoading(false)
             })
     }, [])
 
     return (
         <section className="container my-5">
-            <ItemDetail item={item}/>
+            
+            {
+                loading
+                ?   <span className="visually-hidden">Loading...</span>
+                :   <ItemDetail item={item}/>
+            }
+            
         </section>
     )
 }

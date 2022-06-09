@@ -1,4 +1,6 @@
 .Producto {
+  max-width: 300px;
+  width: 100%;
   padding: 20px 30px;
   box-shadow: 4px 4px 6px #0004;
   text-align: center;

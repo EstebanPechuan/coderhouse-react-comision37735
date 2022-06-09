@@ -1,7 +1,7 @@
 import { Item } from "../Item/Item"
 import './ItemList.css'
 
-export function ItemList({items}) {
+function ItemList({items}) {
 
     return (
         <div className="ListaProductos">
@@ -14,3 +14,5 @@ export function ItemList({items}) {
         </div>
     )
 }
+
+export default ItemList
