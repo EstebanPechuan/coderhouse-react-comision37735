@@ -5,7 +5,7 @@ const productos = [
         desc: "Una descripción",
         precio: 800,
         img: 'BH-38.png',
-        categoria: 'cocina'
+        categoria: 'hospital'
     },
     {
         id: 2,
