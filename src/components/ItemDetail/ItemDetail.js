@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import './ItemDetail.css'
 import { useState } from "react";
+import './ItemDetail.css'
+import { ItemCount } from "../ItemCount/ItemCount";
 
 const imagenes = [
     'https://png.pngtree.com/thumb_back/fh260/background/20211031/pngtree-abstract-bg-image_914283.png',
@@ -12,6 +13,8 @@ const imagenes = [
 
 export function ItemDetail({item}) {
     const [img, setImg] = useState(imagenes[0])
+    const [valor, setValor] = useState(1)
+
     const navigate = useNavigate()
 
     const handleVolver = () => {
@@ -44,6 +47,8 @@ export function ItemDetail({item}) {
                     <p>Descripción: <span>{item.desc}</span></p>
                     <p>Precio: <span>{item.precio}</span></p>
                     <button className="buttonCart">Add to Cart</button>
+
+                    <ItemCount className="ItemCount" stock={10} initial={1} valor={valor} setValor={setValor} />
                 </div>
             </main>
 

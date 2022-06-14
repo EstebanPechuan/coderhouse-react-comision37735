@@ -1,5 +1,7 @@
 .Card {
-    padding: 20px 30px;
+    width: 200px;
+    margin-top: 50px;
+    padding: 20px 0;
     background: #ddd;
     border-radius: 8px;
     display: flex;

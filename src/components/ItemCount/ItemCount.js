@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import  "./ItemCount.css";
 
-export function ItemCount({title, stock, initial}) {
-    const [valor, setValor] = useState(initial)
+export function ItemCount({stock, initial, valor, setValor}) {
 
     const sumarValor = () => {
         if (valor < stock) {
@@ -21,9 +20,7 @@ export function ItemCount({title, stock, initial}) {
     }, [valor])
     
     return (
-        <div className="Card">
-            <p>{title}</p>
-            
+        <div className="Card">            
             <div className="Buttons">
                 <button onClick={restarValor}>-</button>
                 <span>{valor}</span>
